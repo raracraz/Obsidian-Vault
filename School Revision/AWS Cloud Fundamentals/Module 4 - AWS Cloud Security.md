@@ -98,15 +98,31 @@ Some key takeaways from this section of the module include:
 
 ### IAM: Essential components
 
-
+-   An IAM user is a person or application defined in an AWS account with a unique name and security credentials
+-   An IAM group is a collection of IAM users for simplified permissions management
+-   An IAM policy is a document defining permissions for users in an AWS account, including access to specific resources and actions the user can perform on them
+-   An IAM role is a tool for granting temporary access to specific AWS resources in an AWS account.
 
 ![](https://i.imgur.com/dKL6kis.png)
 
+### Authenticate as an IAM user to gain access
 
+-   Authentication is the process of proving one's identity.
+-   An IAM user is defined in an AWS account to access AWS resources and must have a unique name and security credentials.
+-   IAM users can have programmatic access or AWS Management Console access or both.
+-   Programmatic access requires an access key ID and secret access key for API calls using the AWS CLI, SDK, or other development tools.
+-   Console access requires the 12-digit account ID or account alias, IAM username, password, and an authentication code if MFA is enabled.
 
+![](https://i.imgur.com/6icLo4r.png)
 
+### IAM MFA
 
+-   AWS services and resources can be accessed using AWS Management Console, AWS CLI, SDKs, and APIs.
+-   For increased security, Multi-Factor Authentication (MFA) can be enabled.
+-   MFA requires users and systems to provide an MFA token along with regular sign-in credentials.
+-   Options for generating MFA authentication tokens include virtual MFA applications, U2F security keys, and hardware MFA devices.
 
+![](https://i.imgur.com/il6MTck.png)
 
 
 
