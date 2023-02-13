@@ -27,7 +27,8 @@ Cloud computing enables you to stop thinking of your infrastructure as hardware,
 
 ### Cloud service models
 
-![[Pasted image 20230213032429.png]]
+![](https://i.imgur.com/eQDJCAC.png)
+
 There are three main cloud service models: Infrastructure as a Service (IaaS), Platform as a Service (PaaS), and Software as a Service (SaaS). 
 - IaaS provides access to the basic components of cloud computing and offers the highest level of control over IT resources. 
 - PaaS reduces the need to manage the underlying infrastructure and focuses on application deployment and management. 
@@ -35,7 +36,8 @@ There are three main cloud service models: Infrastructure as a Service (IaaS), P
 
 ### Cloud computing deployment models
 
-![[Pasted image 20230213032709.png]]
+![](https://i.imgur.com/2cMJgRm.png)
+
 There are three main cloud computing deployment models: cloud, hybrid, and on-premises. 
 - A cloud-based deployment is when an application is fully in the cloud. 
 - A hybrid deployment connects cloud-based resources to existing non-cloud resources. 
@@ -43,7 +45,8 @@ There are three main cloud computing deployment models: cloud, hybrid, and on-pr
 
 ### Similarities between AWS and traditional IT
 
-![[Pasted image 20230213033133.png]]
+![](https://i.imgur.com/yMiddil.png)
+
 AWS has many similarities with traditional on-premises IT systems: 
 - AWS security groups, network access control lists, and IAM are like firewalls, ACLs, and administrators
 - Elastic Load Balancing and Amazon VPC are similar to routers, network pipelines, and switches
@@ -118,7 +121,8 @@ A web service is any piece of software that makes itself available over the inte
 
 The service you select depends on your business goals and technology requirements.
 
-![[Pasted image 20230213043013.png]]
+![](https://i.imgur.com/nLEDKGr.png)
+
 
 AWS offers various compute services for different business goals and technology requirements. Some of these services include Amazon EC2, AWS Lambda, AWS Elastic Beanstalk, Amazon Lightsail, AWS Batch, AWS Outposts, Amazon Elastic Container Service, Amazon Elastic Kubernetes Service, AWS Fargate, and VMware Cloud on AWS. The choice of service will depend on the specific needs of the business.
 
@@ -164,43 +168,50 @@ The AWS Cloud Adoption Framework (AWS CAF) provides guidelines and best practice
 
 In general, the Business, People, and Governance perspectives focus on business capabilities, while the Platform, Security, and Operations perspectives focus on technical capabilities.
 
-![[Pasted image 20230213043327.png]]
+![](https://i.imgur.com/r5JzDoF.png)
+
 
 ### 1. Business perspective
 
 The AWS Cloud Adoption Framework can be used by stakeholders in the Business perspective, such as business managers, finance managers, budget owners, and strategy stakeholders, to create a strong case for cloud adoption and prioritize cloud initiatives. They should align the business and IT strategies and goals for a successful cloud adoption.
 
-![[Pasted image 20230213043407.png]]
+![](https://i.imgur.com/rDOZTFi.png)
+
 
 ### 2. People perspective
 
 The AWS CAF can be used by stakeholders from the People perspective, such as human resources, staffing, and people managers, to analyze the organizational structures and roles, identify new skill and process requirements, and evaluate any gaps. This can help prioritize training, staffing, and organizational changes to build an agile organization
 
-![[Pasted image 20230213043557.png]]
+![](https://i.imgur.com/IPuJSMF.png)
+
 
 ### 3. Governance perspective
 
 Stakeholders from the Governance perspective (such as the CIO, program managers, enterprise architects, etc.) can use the AWS Cloud Adoption Framework (AWS CAF) to align IT strategies with business strategies and goals, maximize the business value of IT investment and minimize business risks. This involves focusing on the necessary skills and processes.
 
-![[Pasted image 20230213043640.png]]
+![](https://i.imgur.com/fap9fHY.png)
+
 
 ### 4. Platform perspective
 
 Stakeholders from the Platform perspective, such as CTOs, IT managers, and solutions architects, use the AWS CAF to understand and communicate the nature of IT systems and their relationships through architectural dimensions and models. The CAF provides guidance on implementing new solutions on the cloud and migrating on-premises workloads to the cloud, and helps these stakeholders describe the architecture of the target state environment in detail.
 
-![[Pasted image 20230213043727.png]]
+![](https://i.imgur.com/ZDa8tKG.png)
+
 
 ### 5. Security perspective
 
 Stakeholders from the Security perspective, such as CISO, IT security managers, and IT security analysts, use the AWS CAF to implement security measures to meet the organization's objectives for visibility, auditability, control, and agility. The AWS CAF helps these stakeholders choose and implement security controls to meet the organization's security needs.
 
-![[Pasted image 20230213043817.png]]
+![](https://i.imgur.com/whIpG2i.png)
+
 
 ### 6. Operations perspective
 
 Stakeholders from the Operations perspective use the AWS CAF to align their day-to-day operations with the business and support its operations. They define current operating procedures and use the framework to identify the process changes and training needed for successful cloud adoption.
 
-![[Pasted image 20230213043842.png]]
+![](https://i.imgur.com/JlWXKnY.png)
+
 
 ### Key Takeaways
 

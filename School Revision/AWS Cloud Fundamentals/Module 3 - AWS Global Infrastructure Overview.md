@@ -26,7 +26,8 @@ The AWS Global Infrastructure is designed and built to deliver a flexible, relia
 -   Regions are isolated from one another for fault tolerance and stability.
 -   Data stored in a specific Region is not replicated outside that Region.
 
-![[Pasted image 20230213063846.png]]
+![](https://i.imgur.com/p6lPzIK.png)
+
 
 ### Selecting a Region
 
@@ -34,7 +35,8 @@ The AWS Global Infrastructure is designed and built to deliver a flexible, relia
 -   Local laws might restrict the Regions where you can offer content or services
 -   Example: European Union (EU) Data Protection Directive
 
-![[Pasted image 20230213063940.png]]
+![](https://i.imgur.com/geWJZBM.png)
+
 
 ### Availability Zones
 
@@ -48,7 +50,8 @@ The AWS Global Infrastructure is designed and built to deliver a flexible, relia
 - AWS recommends replicating data and resources across Availability Zones for resiliency 
 - You should design your systems to survive the temporary or prolonged failure of an Availability Zone in the case of a disaster.
 
-![[Pasted image 20230213064257.png]]
+![](https://i.imgur.com/Uo0Xk8o.png)
+
 
 ### AWS data centers
 
@@ -62,7 +65,8 @@ The AWS Global Infrastructure is designed and built to deliver a flexible, relia
 -   In case of failure, automated processes move data traffic away from the affected area
 -   AWS uses custom network equipment from multiple original device manufacturers (ODMs) that design and manufacture products based on specifications from a second company, which then rebrands the products for sale.
 
-![[Pasted image 20230213064326.png]]
+![](https://i.imgur.com/wvlCkJ6.png)
+
 
 ### Points of Presence
 
@@ -72,7 +76,8 @@ The AWS Global Infrastructure is designed and built to deliver a flexible, relia
 -   AWS Points of Presence are used by various AWS services such as CloudFront, Route 53, and AWS WAF.
 -   Regional edge caches are used by default with Amazon CloudFront to provide alternative content when edge locations are not frequently accessed.
 
-![[Pasted image 20230213064405.png]]
+![](https://i.imgur.com/oo3ndMT.png)
+
 
 ### AWS infrastructure features
 
@@ -80,7 +85,8 @@ The AWS Global Infrastructure is designed and built to deliver a flexible, relia
 -   Built-in component redundancy for fault tolerance and continued operations despite failed components
 -   Minimal to no human intervention while providing high availability with minimal downtime.
 
-![[Pasted image 20230213064608.png]]
+![](https://i.imgur.com/JC9KeMl.png)
+
 
 ### Key Takeaways
 
@@ -101,7 +107,8 @@ Some key takeaways from this section of the module include:
 -   Services delivered as an on-demand utility with pay-as-you-go pricing
 -   Available in seconds.
 
-![[Pasted image 20230213064800.png]]
+![](https://i.imgur.com/zktfJhy.png)
+
 
 ### AWS categories of services
 
@@ -109,7 +116,8 @@ Some key takeaways from this section of the module include:
 -   Course focuses on the most widely used and introductory services, as well as services likely to be covered in the AWS Certified Cloud Practitioner exam
 -   Categories covered: Compute, Cost Management, Database, Management and Governance, Networking and Content Delivery, Security, Identity, and Compliance, Storage.
 
-![[Pasted image 20230213064846.png]]
+![](https://i.imgur.com/ASqOpnD.png)
+
 
 ### Storage service category
 
@@ -123,7 +131,8 @@ Some key takeaways from this section of the module include:
 -   EFS is built to scale on demand to petabytes and reduce the need to provision and manage capacity
 -   S3 Glacier delivers 11 9s of durability and comprehensive security and compliance capabilities.
 
-![[Pasted image 20230213064924.png]]
+![](https://i.imgur.com/dGngvBw.png)
+
 
 ### Compute service category
 
@@ -136,7 +145,8 @@ Some key takeaways from this section of the module include:
 -   Amazon Elastic Kubernetes Service (Amazon EKS) makes it easy to deploy, manage, and scale containerized applications using Kubernetes on AWS.
 -   AWS Fargate is a compute engine for Amazon ECS that allows running containers without managing servers or clusters.
 
-![[Pasted image 20230213075458.png]]
+![](https://i.imgur.com/SlN3Xu5.png)
+
 
 ### Database service category
 
@@ -193,44 +203,3 @@ AWS Networking and Content Delivery Services:
 -   AWS Trusted Advisor: A tool that helps you optimize performance and security of your AWS infrastructure.
 -   AWS Well-Architected Tool: A tool that helps review and improve the design and architecture of your workloads.
 -   AWS CloudTrail: A service that tracks user activity and API usage, providing a historical view of actions taken in your AWS account.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

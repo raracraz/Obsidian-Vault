@@ -45,7 +45,8 @@ AWS pricing is based on a philosophy of paying for what you use, with no long-te
 
 This AWS pricing model is based on a pay-as-you-go approach, allowing users to only pay for the services they use without any upfront expenses. This reduces variable costs and allows users to quickly adapt to changing business needs, freeing up resources to focus on innovation. The services are available on demand, with no long-term contracts or complex licensing dependencies.
 
-![[Pasted image 20230213050417.png]]
+![](https://i.imgur.com/OkI3IaT.png)
+
 
 ### 2. Pay less when you reserve
 
@@ -56,19 +57,22 @@ Options:
 - Partial Upfront reserved instance (PURI)
 - No Upfront reserved instance (NURI)
 
-![[Pasted image 20230213051126.png]]
+![](https://i.imgur.com/qyf67R4.png)
+
 
 ### 3. Pay less by using more
 
 With AWS, you can save money through volume-based discounts as your usage grows. Services like Amazon S3 have tiered pricing, where you pay less per GB as you use more. Data transfer is always free and multiple storage services offer lower costs based on your needs. As your organization evolves, AWS offers services to address your business needs and help you optimize savings by choosing the right combination of storage solutions that balance cost, performance, security, and durability.
 
-![[Pasted image 20230213051419.png]]
+![](https://i.imgur.com/lSr32uH.png)
+
 
 ### 4. Pay even less as AWS grows
 
 AWS is committed to reducing costs in data centers by optimizing hardware, operations, power consumption, and general expenses. These cost-saving measures and the large scale economies of AWS result in lower pricing for customers. AWS has lowered pricing 75 times since 2006 and as the company grows, customers can also enjoy upgrades to higher-performing resources at no additional cost.
 
-![[Pasted image 20230213051515.png]]
+![](https://i.imgur.com/XoajYX4.png)
+
 
 ### Custom pricing:
 
@@ -78,7 +82,8 @@ AWS realizes that every customer has different needs. If none of the AWS pricing
 
 AWS offers a free usage tier, the AWS Free Tier, for new customers for up to one year. The free tier applies to certain services and options, including a free Amazon EC2 T2 micro instance and free usage of Amazon S3, Amazon EBS, Elastic Load Balancing, data transfer, and other AWS services. This is a helpful resource for new AWS customers to get started in the cloud.
 
-![[Pasted image 20230213051647.png]]
+![](https://i.imgur.com/mkCysa2.png)
+
 
 ### Services with no charge:
 
@@ -101,7 +106,8 @@ AWS also offers a variety of services for no additional charge.
 
 - **AWS OpsWorks** is an application management service that makes it easy to deploy and operate applications of all shapes and sizes.
 
-![[Pasted image 20230213051740.png]]
+![](https://i.imgur.com/sD3rieU.png)
+
 
 
 ### Key Takeaways:
@@ -144,7 +150,8 @@ On-premises vs Cloud:
 -   Identifying the best option:
     -   Depends on company's needs for flexibility, agility, and cost management.
 
-![[Pasted image 20230213052304.png]]
+![](https://i.imgur.com/nuQxAN7.png)
+
 
 ### What is Total Cost of Ownership (TCO)?    
 
@@ -154,7 +161,8 @@ On-premises vs Cloud:
 -   Compare costs of running entire infrastructure environment for a specific workload in an on-premises vs. cloud-based infrastructure
 -   Comparison is done for budgeting purposes or to build a business case for deployment solution decisions
 
-![[Pasted image 20230213052449.png]]
+![](https://i.imgur.com/XY4WRM6.png)
+
 
 ### TCO considerations
 
@@ -172,7 +180,8 @@ On-premises vs Cloud:
         -   Direct costs: power, floor space, storage, IT operations
         -   Indirect costs: network and storage infrastructure
 
-![[Pasted image 20230213052549.png]]
+![](https://i.imgur.com/GEgye4E.png)
+
 
 ### On-premises versus all-in-cloud
 
@@ -193,7 +202,8 @@ On-premises vs Cloud:
 
 Note: Chart comparing three-year total cost of ownership for on-premises and AWS available for accessibility. On-premises costs $167,422, while AWS costs $7,509.
 
-![[Pasted image 20230213054525.png]]
+![](https://i.imgur.com/IztaCYb.png)
+
 
 
 ### AWS Pricing Calculator
@@ -210,7 +220,8 @@ Note: Chart comparing three-year total cost of ownership for on-premises and AWS
 -   Enables naming estimates and creating groups of services for organization
 -   Allows for organization of groups and services based on cost-center, department, product architecture, etc.
 
-![[Pasted image 20230213054626.png]]
+![](https://i.imgur.com/kgAi0Jt.png)
+
 
 ### Additional benefit considerations
 
@@ -228,7 +239,8 @@ Note: Chart comparing three-year total cost of ownership for on-premises and AWS
     -   Agile business processes
     -   Increased global reach
 
-![[Pasted image 20230213054728.png]]
+![](https://i.imgur.com/hAzvJty.png)
+
 
 
 ## Section 3: AWS Organizations
@@ -249,7 +261,8 @@ AWS Organizations:
 
 ### AWS Organizations terminology
 
-![[Pasted image 20230213055123.png]]
+![](https://i.imgur.com/iaRXHyc.png)
+
 
 -   AWS Organizations is a service for account management and consolidation.
 -   A basic organization consists of multiple accounts organized into OUs.
@@ -269,7 +282,8 @@ AWS Organizations:
 -   Simplification of billing process with a single payment method for all AWS accounts in the organization
 -   Consolidated billing provides central location to manage billing across all AWS accounts and the ability to benefit from volume discounts
 
-![[Pasted image 20230213055200.png]]
+![](https://i.imgur.com/FMxIuNp.png)
+
 
 
 ### Security with AWS Organizations
@@ -280,11 +294,13 @@ AWS Organizations:
 -   With Organizations, service control policies (SCPs) are used to allow or deny access to particular AWS services for individual AWS accounts or groups of accounts in an organizational unit
 -   SCPs affect all IAM users, groups, and roles for an account, including the AWS account root user.
 
-![[Pasted image 20230213055239.png]]
+![](https://i.imgur.com/a7J9a48.png)
+
 
 ### Organizations setup
 
-![[Pasted image 20230213055332.png]]
+![](https://i.imgur.com/A7pqORK.png)
+
 
 Summary of steps to set up AWS Organizations:
 1.  Create your organization with your current AWS account as the primary account and invite one AWS account to join as a member account, and create another account as a member account.
@@ -339,7 +355,8 @@ Summary of steps to set up AWS Organizations:
 -   Spend Summary shows last month's spending, estimated cost for the current month, and forecasted spending
 -   Month-to-Date Spend by Service displays top services and cost attributed to each service.
 
-![[Pasted image 20230213060002.png]]
+![](https://i.imgur.com/U07xrLX.png)
+
 
 ### Tools in the billing dashboard
 
@@ -356,7 +373,8 @@ Summary of steps to set up AWS Organizations:
 
 - The **AWS Bills** page shows the costs you incurred for each AWS service over the past month, broken down by AWS Region and linked account. 
 - This tool provides access to the latest information on costs and usage, including the monthly bill and a detailed breakdown of AWS services used.
-![[Pasted image 20230213062913.png]]
+![](https://i.imgur.com/dNAFWbv.png)
+
 
 ### Cost Explorer
 
@@ -366,7 +384,8 @@ Summary of steps to set up AWS Organizations:
 -   AWS Bills lists the costs for each service, broken down by region and linked account.
 -   Cost Explorer is a free tool for visualizing and managing AWS costs and usage over time, including a monthly running costs report, forecast for next 3 months, and data on the most used services.
 
-![[Pasted image 20230213062906.png]]
+![](https://i.imgur.com/LwMZSrq.png)
+
 
 ### Forecast and track costs
 
@@ -375,7 +394,8 @@ Summary of steps to set up AWS Organizations:
 -   You can set up budget alerts to be sent via email or Amazon Simple Notification Service (Amazon SNS) when estimated costs exceed the budget.
 -   The AWS Billing budgets panel shows budget names, current and future costs and usage, and headings for current and forecasted versus budgets.
 
-![[Pasted image 20230213062958.png]]
+![](https://i.imgur.com/dKQBnHi.png)
+
 
 ### Cost and usage reporting
 
@@ -384,7 +404,8 @@ Summary of steps to set up AWS Organizations:
 -   It also lists any tax activated for tax allocation purposes.
 -   The reports can be published to an S3 bucket and updated once a day.
 
-![[Pasted image 20230213063048.png]]
+![](https://i.imgur.com/wDZvj27.png)
+
 
 
 ## Section 5: Technical support
@@ -402,8 +423,10 @@ Summary of steps to set up AWS Organizations:
 -   AWS Trusted Advisor is an online resource that checks for opportunities to reduce monthly costs and increase productivity.
 -   Support Concierge is a billing and account expert who can quickly resolve non-technical billing and account-level inquiries.
 
-![[Pasted image 20230213063207.png]]
-![[Pasted image 20230213063232.png]]
+![](https://i.imgur.com/vYImsam.png)
+
+![](https://i.imgur.com/h8FQWFD.png)
+
 
 ### Support plans
 
@@ -430,7 +453,8 @@ AWS Support Plans:
     -   Technical Account Manager (TAM) provides technical expertise and acts as primary point of contact
     -   Helps build and operate workloads following AWS best practices, supports launches and migrations.
 
-![[Pasted image 20230213063340.png]]
+![](https://i.imgur.com/xDxA2i5.png)
+
 
 ### Case severity and response times
 
@@ -440,26 +464,3 @@ Response Times Based on Case Severity:
 -   High: Important functions impaired or degraded.
 -   Normal: Non-critical functions behaving abnormally or time-sensitive development question.
 -   Low: General development question or feature request.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
