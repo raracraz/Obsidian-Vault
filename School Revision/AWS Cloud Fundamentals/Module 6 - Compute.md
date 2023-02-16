@@ -228,60 +228,217 @@ Some key takeaways from this section of the module are:
 
 ### Containers versus virtual machines
 
+-   Virtual machines run directly on a hypervisor, while containers can run on any Linux OS with appropriate kernel feature support and Docker daemon
+-   Containers are highly portable and can run on various hosts, including laptops, VMs, EC2 instances, and bare metal servers
+-   The right side of the diagram shows a virtual machine-based deployment where each EC2 instance runs its own VM to provide process isolation for each app
+-   The left side of the diagram shows a container-based deployment where only one EC2 instance runs a virtual machine with three containers, each running its own app with process isolation
+-   Containers communicate directly to the kernel in the Linux guest OS and are unaware of their container silo
+-   The Docker engine manages how the containers run on the Linux guest OS and provides essential management functions throughout the container lifecycle.
+
+![](https://i.imgur.com/LNc2zB3.png)
+
+### Amazon Elastic Container Service (Amazon ECS)
+
+-   AWS offers Amazon Elastic Container Service (Amazon ECS) to simplify container management
+-   Amazon ECS is a highly scalable and high-performance container management service that supports Docker containers
+-   Amazon ECS allows for easy deployment of applications on a managed cluster of Amazon EC2 instances
+-   Key features of Amazon ECS include the ability to launch tens of thousands of Docker containers in seconds, monitor container deployment, manage the state of the container cluster, and schedule containers using a built-in or third-party scheduler (e.g., Apache Mesos or Blox).
+
+![](https://i.imgur.com/S5tjMzA.png)
+
+### Amazon ECS orchestrates containers
+
+-   To run your application on Amazon ECS, you need to create a task definition, which is a text file that describes one or more containers that make up your application.
+-   Task definitions can specify various parameters, such as which containers to use, which ports to open, and which data volumes to use.
+-   A task is the instantiation of a task definition within a cluster, and you can specify how many tasks will run on your cluster.
+-   The Amazon ECS task scheduler is responsible for placing tasks within your cluster, and a task can run anywhere from one to ten containers.
+-   An ECS cluster is made up of a group of EC2 instances that are running an Amazon ECS container agent.
+-   Amazon ECS provides multiple scheduling strategies to place containers across your clusters based on your resource needs and availability requirements.
+
+![](https://i.imgur.com/fUztwvC.png)
+
+### Amazon ECS cluster options
+
+-   There are three options for creating an Amazon ECS cluster: Networking Only cluster (powered by AWS Fargate), EC2 Linux + Networking cluster, and EC2 Windows + Networking cluster.
+-   If you choose the EC2 launch type options, you need to specify details about the EC2 instances that make up your cluster, including On-Demand or Spot Instances.
+-   The EC2 launch type provides granular control over the infrastructure that runs your container applications because you manage the EC2 instances that make up the cluster.
+-   Amazon ECS keeps track of all the CPU, memory, and other resources in your cluster and finds the best server for your container based on your specified resource requirements.
+-   If you choose the networking-only Fargate launch type, the cluster that runs your containers will be managed by AWS.
+-   With the Fargate option, you only need to package your application in containers, specify the CPU and memory requirements, define networking and IAM policies, and launch the application.
+-   Fargate removes the need to provision, configure, or scale the cluster and enables you to focus on designing and building your applications.
+
+![](https://i.imgur.com/RF8Q3W0.png)
+
+### What is Kubernetes?
+
+-   Kubernetes is open source software for container orchestration that works with many containerization technologies, including Docker
+-   Kubernetes has a large community of developers and companies that build extensions, integrations, and plugins to keep the software relevant and add new features
+-   Kubernetes enables deployment and management of containerized applications at scale, using the same toolset in both on-premises data centers and the cloud
+-   Kubernetes manages a cluster of compute instances called nodes and runs containers based on resource availability and requirements, in logical groupings called pods
+-   Pods are given IP addresses and DNS names, which Kubernetes uses to connect services with each other and external traffic
+-   Kubernetes allows for running containerized applications anywhere without needing to change operational tooling, for example, moving from local development machines to cloud production deployments
+
+![](https://i.imgur.com/Ux33U7s.png)
+
+### Amazon Elastic Kubernetes Service (Amazon EKS)
+
+-   Amazon Elastic Kubernetes Service (Amazon EKS) is a managed Kubernetes service that simplifies the management of Kubernetes clusters.
+-   It allows you to run Kubernetes on AWS without the need to install, operate, and maintain your own Kubernetes control plane.
+-   Amazon EKS is certified Kubernetes conformant, making it compatible with existing applications that run on upstream Kubernetes.
+-   Amazon EKS automatically manages the availability and scalability of the cluster nodes responsible for starting and stopping containers, scheduling containers on virtual machines, storing cluster data, and other tasks.
+-   It also detects and replaces unhealthy control plane nodes for each cluster automatically.
+-   Amazon EKS allows you to take advantage of the performance, scale, reliability, and availability of the AWS Cloud, including AWS networking and security services like Application Load Balancers for load distribution, IAM for role-based access control, and VPC for pod networking.
+-   Amazon offers both Amazon ECS and Amazon EKS to provide customers with flexible options to choose the option that best matches their needs.
+
+### Amazon Elastic Container Registry (Amazon ECR)
+
+-   Amazon Elastic Container Registry (Amazon ECR) is a fully managed Docker container registry.
+-   It makes it easy for developers to store, manage, and deploy Docker container images.
+-   Amazon ECR is integrated with Amazon ECS, which allows for storing, running, and managing container images for applications that run on Amazon ECS.
+-   Amazon ECR supports Docker Registry HTTP API version 2, which enables interacting with Amazon ECR using Docker CLI commands or preferred Docker tools.
+-   Container images can be transferred to and from Amazon ECS via HTTPS and are automatically encrypted at rest using Amazon S3 server-side encryption.
+-   Amazon ECR images can be used with Amazon EKS.
+
+![](https://i.imgur.com/XaJArkm.png)
 
 
+### Key Takeaways
 
+Some key takeaways from this section include:
+- Containers can hold everything that an application needs to run.
+- Docker is a software platform that packages software into containers. 
+- A single application can span multiple containers.
+- Amazon Elastic Container Service (Amazon ECS) orchestrates the running of Docker containers.
+- Kubernetes is open source software for container orchestration. 
+- Amazon Elastic Kubernetes Service (Amazon EKS) enables you to run Kubernetes on AWS
+- Amazon Elastic Container Registry (Amazon ECR) enables you to store, manage, and deploy your Docker containers
 
+## Section 5: Introduction to AWS Lambda
 
+### AWS Lambda: Run code without servers
 
+-   AWS offers multiple compute options, including virtual machines and container-based services.
+-   Serverless computing is a third approach to compute that does not require server provisioning or management.
+-   AWS Lambda is an event-driven, serverless compute service.
+-   Lambda functions contain the code that you upload and are triggered on a scheduled basis or in response to an event.
+-   Code only runs when triggered, and you are only charged for the compute time you consume.
 
+![](https://i.imgur.com/NAYy4Z8.png)
 
+### Benefits of Lambda
 
+-   AWS Lambda is a serverless compute service that runs your code without needing to provision or manage servers.
+-   It supports multiple programming languages, including Java, Go, PowerShell, Node.js, C#, Python, and Ruby, and allows the use of native or third-party libraries.
+-   Lambda automates the administration, maintenance, and security patches, and provides built-in logging and monitoring through Amazon CloudWatch.
+-   Lambda is fault-tolerant, maintains compute capacity across multiple Availability Zones, and has no maintenance windows or scheduled downtimes.
+-   AWS Step Functions can be used to orchestrate multiple Lambda functions for complex or long-running tasks.
+-   With Lambda, you only pay for the requests served and the compute time required, with billing metered in increments of 100 milliseconds, making it cost-effective and scalable from a few requests per day to thousands of requests per second.
 
+![](https://i.imgur.com/xLYdF8G.png)
 
+### AWS Lambda event sources
 
+-   An event source is a service or application that produces events that trigger an AWS Lambda function to run.
+-   Some services publish events to Lambda by invoking the Lambda function directly, including Amazon S3, Amazon SNS, and Amazon CloudWatch Events.
+-   Lambda can also poll resources in other services that do not publish events to Lambda, such as Amazon SQS and Amazon DynamoDB.
+-   Some services like Elastic Load Balancing and Amazon API Gateway can invoke Lambda functions directly.
+-   You can also invoke Lambda functions directly using various methods, such as the Lambda console, API, SDK, CLI, and toolkits.
+-   Lambda automatically monitors functions using Amazon CloudWatch, and logs all requests that are handled by the function.
 
+![](https://i.imgur.com/6RtH6z9.png)
 
+### AWS Lambda function configuration
 
+-   A Lambda function is custom code to process events, which Lambda runs on your behalf.
+-   When creating a Lambda function using the AWS Management Console, you give it a name, specify the runtime environment, and an execution role.
+-   After creating the function, you can configure it by adding a trigger, specifying the function code, and allocating memory (128 MB to 10,240 MB).
+-   You can also add environment variables, a description, timeout, and other settings.
+-   These settings end up in a Lambda deployment package, which is a ZIP archive that contains your function code and dependencies.
+-   The Lambda console manages the package for you, but you need to create one if you use the Lambda API to manage functions.
 
+![](https://i.imgur.com/MeC9UiN.png)
 
+### Schedule-based Lambda function example: Start and stop EC2 instance
 
+-   A schedule-based Lambda function can be used to reduce Amazon EC2 usage
+-   AWS Lambda and Amazon CloudWatch Events can be configured to automate the process
+-   CloudWatch event is scheduled to run a Lambda function to stop EC2 instances at a predefined time
+-   The Lambda function runs with an IAM role that grants it permission to stop EC2 instances
+-   EC2 instances enter the stopped state
+-   Another CloudWatch event is scheduled to run a Lambda function to start EC2 instances at a predefined time in the morning
+-   The Lambda function runs with an IAM role that grants it permission to start EC2 instances
+-   EC2 instances enter the running state
 
+![](https://i.imgur.com/af1qc5p.png)
 
+### Event-based Lambda function example: Create thumbnail images
 
+-   A user uploads an object to an S3 bucket (object-created event).
+-   S3 detects the object-created event.
+-   S3 invokes the Lambda function and passes event data.
+-   The Lambda function runs with the IAM role that gives it permission to access the source and target S3 buckets.
+-   Based on the event data, the Lambda function knows the source bucket name and object key name, reads the object, and creates a thumbnail using graphics libraries.
+-   The Lambda function saves the thumbnail to the target bucket.
 
+![](https://i.imgur.com/xyATXMR.png)
 
+### AWS Lambda quotas
 
+Soft limits per Region:
 
+-   Concurrent executions: 1,000
+-   Function and layer storage: 75 GB
 
+Hard limits for individual functions:
 
+-   Maximum function memory allocation: 10,240 MB
+-   Function timeout: 15 minutes
+-   Deployment package size: 250 MB unzipped, including layers
+-   Container image code package size: 10 GB
 
+### Key Takeaways
 
+Some key takeaways from this section of the module include:
+- Serverless computing enables you to build and run applications and services without provisioning or managing servers. 
+- AWS Lambda is a serverless compute service that provides built-in fault tolerance and automatic scaling.
+- An event source is an AWS service or developer-created application that triggers a Lambda function to run. 
+- The maximum memory allocation for a single Lambda function is 10,240 MB. 
+- The maximum run time for a Lambda function is 15 minutes
 
+## Section 6: Introduction to AWS Elastic Beanstalk
+---
 
+### AWS Elastic Beanstalk
 
+-   AWS Elastic Beanstalk is a PaaS for the deployment, scaling, and management of web applications and services.
+-   You remain in control of your application and only need to upload your code.
+-   You can choose your instance type, database, set up automatic scaling, update your application, access server log files, and enable HTTPS on the load balancer.
+-   Elastic Beanstalk handles the deployment process, including capacity provisioning, load balancing, scaling, and monitoring application health.
+-   You have full control over the underlying AWS resources that power your application and can access them at any time.
+-   There is no additional charge for Elastic Beanstalk. You only pay for the AWS resources you use, with no minimum fees or upfront commitments.
 
+### AWS Elastic Beanstalk deployments
 
+-   AWS Elastic Beanstalk allows you to deploy your code using the AWS Management Console, AWS CLI, Visual Studio, and Eclipse.
+-   Elastic Beanstalk provides all the application services you need for your application, and you only need to create your code.
+-   Elastic Beanstalk supports a wide range of platforms, including Docker, Go, Java, .NET, Node.js, PHP, Python, and Ruby.
+-   Elastic Beanstalk deploys your code on Apache Tomcat for Java, Apache HTTP Server for PHP and Python, NGINX or Apache HTTP Server for Node.js, Passenger or Puma for Ruby, and Microsoft Internet Information Services (IIS) for .NET applications, Java SE, Docker, and Go.
 
+### Benefits of Elastic Beanstalk
 
+-   Elastic Beanstalk is easy to use and handles deployment details automatically.
+-   It saves developer time by allowing them to focus on writing code.
+-   AWS updates the underlying platform to run your application with patches and updates.
+-   Elastic Beanstalk can handle peaks in workload and scales your application based on its needs.
+-   You can select optimal AWS resources, like Amazon EC2 instance type, for your application.
+-   You retain full control over the AWS resources that power your application.
+-   You can seamlessly take over some or all of the elements of your infrastructure by using Elastic Beanstalk's management capabilities.
 
+### Key Takeaways
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Some key takeaways from this section of the module include:
+- AWS Elastic Beanstalk enhances developer productivity.
+	- Simplifies the process of deploying your application.
+	- Reduces management complexity.
+- Elastic Beanstalk supports Java, .NET, PHP, Node.js, Python, Ruby, Go, and Docker.
+- There is no charge for Elastic Beanstalk. Pay only for the AWS resources you use. 
