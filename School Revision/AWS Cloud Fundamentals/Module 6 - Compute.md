@@ -209,11 +209,24 @@ Some key takeaways from this section of the module are:
 
 ### Container basics
 
-
+- Containers are a method of operating system virtualization
+- Benefits:
+	- Repeatable
+	- Self-contained environments
+	- Software runs the same in different environments
+		- Dev laptop, test, production
+	- Faster to launch or stop or terminate than virtual machines
 
 ![](https://i.imgur.com/G1KZRzp.png)
 
+### What is Docker?
 
+- Docker enables you to build, test and deploy containers quickly
+- A container has everything a software application needs to run
+
+![](https://i.imgur.com/DbT6kcR.png)
+
+### Containers versus virtual machines
 
 
 
