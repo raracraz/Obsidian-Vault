@@ -86,7 +86,7 @@ Some key takeaways from this section of the module include:
 - For services that are categorized as infrastructure as a service (IaaS), the customer is responsible for performing necessary security configuration and management tasks
 	- For example, guest OS updates and security patches, firewall, security group configurations
 
-### Section 2: AWS Identity and Access Management (IAM)
+## Section 2: AWS Identity and Access Management (IAM)
 ---
 ### AWS Identity and Access Management (IAM)
 

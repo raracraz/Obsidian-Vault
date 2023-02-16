@@ -97,7 +97,7 @@ Some key takeaways from this section of the module include:
 - Edge locations, and Regional edge caches improve performance by caching content closer to users.
 
 
-### Section 2: AWS services and service category overview
+## Section 2: AWS services and service category overview
 ---
 
 ### AWS foundational services
